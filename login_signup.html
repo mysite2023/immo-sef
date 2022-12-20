@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <meta charset="utf-8">
+        <title>sefrouImmo - agence immobilier </title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+   
+</head>
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1 style="padding-top: 15px"> Crée un compte</h1>
+                <input type="text" name="fname" placeholder="prenom" required>
+                <input type="text" name="lname" placeholder="Nom">
+                <input type="text" name="address" placeholder="Addresse">
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="text" name="phone" placeholder="Phone Number">
+                <input type="email" name="Email" placeholder="Email">
+                <button style="margin-top:10px" > <a href="#" style="color:aliceblue;">Crée</a></button>
+                <h5>vous avez un compte! <a class="ghost" id="signIn" style="color:#00B98E;"><u>Se connecter</u></a></h5>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                
+                <h1 style="padding-bottom: 15px"> connexion</h1>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <a href="#" style="padding-left:150px; font-weight: bold"> mot de passe oublié?</a>
+                <button style="margin-top: 10px"> connexion.</button>
+                <h5>Crée facilement un compte! <a class="ghost" id="signUp" style="color:#00B98E;"><u>Sign Up</u></a></h5>
+            </form>
+            
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <img src="img/carousel-2.jpg" alt="movie-1" height="480" width="500"/>
+                    
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <img src="img/carousel-1.jpg" alt="movie-2" height="480" width="500"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+</body>
+</html>
